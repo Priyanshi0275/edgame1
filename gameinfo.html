@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body{
+    background-color: #061755
+    ;
+  }
+    .header {
+      color: azure;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color:#7e7cd8
+
+  ;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #eff1f3;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #2ba8f6;
+  
+  width: 0%;
+}
+.content{
+  color: azure;
+  font-size: 25px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #080707;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #313031;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover {background-color:#7e7cd8}
+
+.button:active {
+  background-color: #4a6ed1;
+  box-shadow: 0 5px #050120;
+  transform: translateY(4px);
+}
+.container{  
+text-align: center;    
+width: 300px;  
+height: 200px;  
+padding-left: 550px;  
+}  
+</style>
+<body>
+   
+      </style>
+      </head>
+      <body>
+      
+      <div class="header">
+        <h2>HOW TO PLAY!</h2>
+        <div class="progress-container">
+          <div class="progress-bar" id="myBar"></div>
+        </div>  
+      </div>
+      
+      <div class="content">
+       <br>
+       
+       <br>
+       <ul>
+        <li>Begin by launching the game to view the interactive periodic table.</li>
+        <li>Click on any element from the periodic table to start the quiz associated with that element.</li>
+        <li>Once you select an element, a quiz with questions related to that element will appear. Read each question and choose the correct answer from the provided options.</li>
+        <li>After answering all the questions for the selected element, submit your responses to receive a score specifically for that element.</li>
+        <li>Check your score for the current element to see how well you did on that set of questions.</li>
+        <li>Click on different elements to answer their unique quiz questions and earn scores for each one.</li>
+        <li>Review and compare your scores across different elements to gauge your overall knowledge of the periodic table.</li>
+        <li>Replay the game to improve your scores, challenge yourself with different elements, and enhance your understanding of the periodic table.</li>
+        <li>Enjoy the process as you learn about each element and test your knowledge through interactive quizzes!</li>
+        
+      </ul>
+
+      </div>
+      <div class="container">  
+    <form action="./index1.html">
+       <button class="button button1" >PLAY</button>
+    </form>
+</div>
+      <script>
+      // When the user scrolls the page, execute myFunction 
+      window.onscroll = function() {myFunction()};
+      
+      function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      }
+      </script>
+</body>
+</html>
